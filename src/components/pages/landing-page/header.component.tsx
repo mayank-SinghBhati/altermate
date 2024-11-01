@@ -14,6 +14,7 @@ import {
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon, ArrowUpRight, LucideDownload, Menu, Search, SidebarCloseIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 export const Header = () => {
@@ -37,7 +38,7 @@ export const Header = () => {
           {/* Nav part - 1 */}
           <div className="w-fit h-full flex items-center gap-x-3">
             {/* Nav part - 1.1 (logo) */}
-            <div className="flex items-center gap-x-1.5 tracking-wide mr-2">
+            <Link className="flex items-center gap-x-1.5 tracking-wide mr-2 hover:opacity-80" href="/">
               <svg
                 width="28"
                 height="38"
@@ -52,7 +53,7 @@ export const Header = () => {
                 />
               </svg>
               <h1 className="text-xl font-semibold">Altermate</h1>
-            </div>
+            </Link>
             {/* Nav part - 1.2 (navItems) */}
             <div className="w-fit space-x-3 max-sm:hidden">
               <NavigationMenu>
@@ -63,13 +64,13 @@ export const Header = () => {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-3 md:w-[400px]">
-                        <ListItemLink href="/docs" title="Top 10">
+                        <ListItemLink href="/mentors/top" title="Top 10">
                           These mentors are the best among all (paid)
                         </ListItemLink>
-                        <ListItem href="/" title="Create project">
+                        <ListItem href="/project/create" title="Create project">
                           Build a new project to help others learn.
                         </ListItem>
-                        <ListItem href="/docs/installation" title="Be a mentor">
+                        <ListItem href="/mentors/apply" title="Be a mentor">
                           Apply to become a mentor.
                         </ListItem>
                       </ul>
@@ -81,13 +82,13 @@ export const Header = () => {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[300px] gap-3 p-3">
-                        <ListItem href="/" title="Projects">
+                        <ListItem href="/projects" title="Projects">
                           Get started with your interest.
                         </ListItem>
-                        <ListItem href="/" title="Teams">
+                        <ListItem href="/teams" title="Teams">
                           Team work results in betterment
                         </ListItem>
-                        <ListItemLink href="/" title="Docs" />
+                        <ListItemLink href="/docs" title="Docs" />
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -146,18 +147,18 @@ export const Header = () => {
                   <div className="pb-5 tracking-wider">
                     <h2 className="font-normal text-lg">Mentors</h2>
                     <ul className="space-y-3 px-1 py-2">
-                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/" className="text-lg font-light">Top 10 <ArrowUpRight size={24} className="inline-block stroke-2" /></a></li>
-                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/" className="text-lg font-light">Create project</a></li>
-                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/" className="text-lg font-light">Be a mentor</a></li>
+                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/mentors/top" className="text-lg font-light">Top 10 <ArrowUpRight size={24} className="inline-block stroke-2" /></a></li>
+                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/projects/create" className="text-lg font-light">Create project</a></li>
+                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/mentors/apply" className="text-lg font-light">Be a mentor</a></li>
                     </ul>
                   </div>
                   {/* students */}
                   <div className="pb-5 tracking-wider">
                     <h2 className="font-normal text-lg">Students</h2>
                     <ul className="space-y-3 px-1 py-2">
-                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/" className="text-lg font-light">Projects</a></li>
-                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/" className="text-lg font-light">Teams</a></li>
-                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/" className="text-lg font-light">Docs <ArrowUpRight size={24} className="inline-block stroke-2" /></a></li>
+                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/projects" className="text-lg font-light">Projects</a></li>
+                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/teams" className="text-lg font-light">Teams</a></li>
+                      <li className="px-4 h-12 flex items-center w-full rounded-lg border hover:bg-accent"><a href="/docs" className="text-lg font-light">Docs <ArrowUpRight size={24} className="inline-block stroke-2" /></a></li>
                     </ul>
                   </div>
                 </div>

@@ -49,7 +49,7 @@ export const Footer = () => {
             </div>
             <div className="flex gap-x-10 gap-y-5 flex-wrap text-xs">
               {footerItems.map((footerItem) => (
-                <div>
+                <div key={footerItem.name}>
                   <h4 className="text-muted-foreground font-normal text-sm">
                     {footerItem.name}
                   </h4>
@@ -70,7 +70,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="w-full h-px bg-muted" />
-          <div className="flex py-4 items-center justify-between gap-5 max-xs:flex-wrap">
+          <div className="flex pt-4 pb-1 items-center justify-between gap-5 max-xs:flex-wrap">
             <div className="space-y-2">
               <h4 className="font-light text-sm">
                 One step ahead in project based learning

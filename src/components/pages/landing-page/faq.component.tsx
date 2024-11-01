@@ -21,14 +21,14 @@ export const FaqSection = () => {
             <p className="text-sm font-light text-black/40 dark:text-white/60 mb-2">
               not found? what are you looking for
             </p>
-            <Button
+            <Button 
               variant="link"
               className="text-altermateOrange font-light tracking-wider p-0"
             >
               Contact us
             </Button>
           </div>
-          {/* Graphical presentation */}
+          {/* faq section */}
           <div className="max-lg:min-w-fit w-full sm:w-4/5 lg:w-full sm:max-w-[475px]">
             <h1 className="w-full max-lg:hidden text-2xl font-semibold mb-2.5 text-black dark:text-white">
               FAQ
@@ -37,6 +37,7 @@ export const FaqSection = () => {
               {faqs.map((faq) => (
                 <AccordionItem
                   value={faq.question}
+                  key={faq.question}
                   className="backdrop-blur-md px-1"
                 >
                   <AccordionTrigger className="hover:no-underline focus-visible:outline-none">
